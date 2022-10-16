@@ -1,6 +1,5 @@
 import { Router } from "express";
-
-import { createProductController, listProductController, retrievePoductController, deleteProductController, updateProductController, productAndCategoryController } from "../controllers/product.controllers";
+import { createProductController, listProductController, retrievePoductController, updateProductController, deleteProductController, productAndCategoryController } from "../controllers/product.controllers";
 
 const router = Router();
 
@@ -9,6 +8,6 @@ router.get("", listProductController);
 router.get("/:id", retrievePoductController);
 router.patch("/:id", updateProductController);
 router.delete("/:id", deleteProductController);
-router.get("/category/:id", retrievePoductController);
+router.get("/category/:id", productAndCategoryController);
 
 export default router;

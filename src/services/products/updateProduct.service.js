@@ -17,7 +17,7 @@ const updateProductService = async (id, product) => {
     if (res.rowCount === 0) {
       throw new Error("Product not Found");
     }
-    return res.rows[0];
+    return {message: "Updated product", product: res.rows[0]};
   } catch (error) {
     throw new Error(error);
   }

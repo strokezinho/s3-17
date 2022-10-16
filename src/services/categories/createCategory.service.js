@@ -10,7 +10,7 @@ const createCategoryService = async (category) => {
       RETURNING *;`,
       [category.name]
     );
-    return res.rows[0];
+    return {message: "Created category", category: res.rows[0]};
   } catch (error) {
     throw new Error(error);
   }

@@ -56,4 +56,4 @@ const createCategoryController = async (request, response) => {
     }
   };
   
-  export default { createCategoryController, listCategoryController, retrieveCategoryController, deleteCategoryController, updateCategoryController };
+  export { createCategoryController, listCategoryController, retrieveCategoryController, deleteCategoryController, updateCategoryController };
